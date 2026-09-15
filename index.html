@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B2B Client Analytics Portal</title>
+  <style>
+    :root { --bg: #0f172a; --card: #1e293b; --text: #f8fafc; --accent: #38bdf8; --border: #334155; }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
+    body { background-color: var(--bg); color: var(--text); padding: 2rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .badge { background: #0369a1; color: #e0f2fe; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; }
+    .card h3 { font-size: 0.9rem; color: #94a3b8; font-weight: 500; }
+    .card .val { font-size: 2rem; font-weight: 700; color: var(--accent); margin-top: 0.5rem; }
+    .table-container { margin-top: 2.5rem; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; text-align: left; }
+    th, td { padding: 12px 16px; border-bottom: 1px solid var(--border); font-size: 0.95rem; }
+    th { color: #94a3b8; font-weight: 600; }
+    .status { padding: 4px 8px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; }
+    .status.active { background: #166534; color: #bbf7d0; }
+    .status.pending { background: #854d0e; color: #fef08a; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1>Client Analytics & Ops Portal</h1>
+        <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 4px;">Live Operations & Revenue Tracker Demo</p>
+      </div>
+      <span class="badge">Live MVP System</span>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Total Client Revenue</h3>
+        <div class="val">$14,250.00</div>
+      </div>
+      <div class="card">
+        <h3>Active Projects</h3>
+        <div class="val">12 Active</div>
+      </div>
+      <div class="card">
+        <h3>System Efficiency Rate</h3>
+        <div class="val">98.4%</div>
+      </div>
+    </div>
+
+    <div class="table-container">
+      <h3 style="margin-bottom: 1rem;">Recent Client Deployments</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Client / Agency</th>
+            <th>Service Type</th>
+            <th>Status</th>
+            <th>Monthly Retainer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Apex Digital (US)</td>
+            <td>Custom Web Application</td>
+            <td><span class="status active">Active</span></td>
+            <td>$1,500/mo</td>
+          </tr>
+          <tr>
+            <td>Nova Logistics (UK)</td>
+            <td>Automated Dashboard</td>
+            <td><span class="status active">Active</span></td>
+            <td>$1,200/mo</td>
+          </tr>
+          <tr>
+            <td>Vanguard Media (CA)</td>
+            <td>Client Booking Portal</td>
+            <td><span class="status pending">In Integration</span></td>
+            <td>$800/mo</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
