@@ -83,5 +83,17 @@
       </table>
     </div>
   </div>
+<script>
+  // Simple Interactive Filter Function
+  function filterTable() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let rows = document.querySelectorAll("tbody tr");
+    
+    rows.forEach(row => {
+      let text = row.textContent.toLowerCase();
+      row.style.display = text.includes(input) ? "" : "none";
+    });
+  }
+</script>
 </body>
 </html>
